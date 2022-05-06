@@ -1,0 +1,20 @@
+import array
+import numpy as np
+
+with open(r'C:\Users\benjt\OneDrive\Desktop\Code\randNames.txt') as n:
+    names = n.read().splitlines()
+
+with open(r'C:\Users\benjt\OneDrive\Desktop\Code\randTimes.txt') as t:
+    times = t.read().splitlines()
+
+patientList = np.column_stack((names, times))
+
+
+with open(r'C:\Users\benjt\OneDrive\Desktop\Code\namesTimesList.txt', 'w') as f:
+    for row in patientList:
+        for x in row:
+            f.write(str(x) + ',')
+        f.write('\n')
+
+
+print(f'File has been created... ')
