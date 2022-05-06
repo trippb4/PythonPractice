@@ -1,0 +1,20 @@
+# generate random integer values
+import random
+
+# initialized dice roll
+face1 = random.randint(1, 6)
+face2 = random.randint(1, 6)
+
+# number of tries
+count = 0
+
+# generate face values of dice while adding onto number of tries
+while face1 != face2:
+    print("Dice Roll:", face1, face2)
+    face1 = random.randint(1, 6)
+    face2 = random.randint(1, 6)
+    count = count + 1
+
+# print out the matching integers
+print("It's a match!:", face1, face2)
+print("It took", count, "tries for this result!")
